@@ -41,7 +41,7 @@ class User(SQLModel, table=True):
         back_populates="host",
         sa_relationship_kwargs={"uselist": False, "single_parent": True}, # 3
     )
-    bookings: list["Booking"] = Relationship(back_populates="time_slot")
+    bookings: list["Booking"] = Relationship(back_populates="guest")
     
     
     
